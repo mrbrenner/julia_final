@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<title>The Color Red</title>
+
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+</head>
+<body>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div class="page" style="background-image:url(pages/the_color_red_book.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book2.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book3.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book4.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book5.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book6.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book7.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book8.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book9.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book10.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book11.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book12.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book13.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book14.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book15.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book16.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book17.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book18.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book19.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book20.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book21.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book22.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book23.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book24.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book25.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book26.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book27.jpg)"></div>
+			<div class="double" style="background-image:url(pages/the_color_red_book28.jpg)"></div>
+			<div class="page" style="background-image:url(pages/the_color_red_book29.jpg)"></div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	var flipbook = $('.flipbook');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+
+	$('.flipbook .double').scissor();
+
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	}
+
+	);
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../../lib/turn.min.js'],
+	nope: ['../../lib/turn.html4.min.js'],
+	both: ['../../lib/scissor.min.js', 'css/double-page.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
