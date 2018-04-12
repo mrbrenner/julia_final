@@ -3,9 +3,11 @@
 	var statePhoto = false;
 	var stateVideo = false;
 	var stateZines = false;
+	var stateDrawings = false;
 	var hovPhoto = false;
 	var hovVideo = false;
 	var hovZines = false;
+	var hovDrawings = false;
 	var stateMenu = false;
 
 // dropdown menu on click
@@ -21,17 +23,21 @@
 		console.log("showPhoto");
 		stateVideo=false;
 		stateZines=false;
+		stateDrawings=false;
 		$("#photo").show();
 		$("#video").hide();
 		$("#zines").hide();
+		$("#drawings").hide();
 		$(".buttonPhoto").css("color", "red");
 		} else {
 		console.log("hidePhoto");
 		stateVideo=false;
 		stateZines=false;
+		stateDrawings=false;
 		$("#video").hide();
 		$("#photo").hide();
 		$("#zines").hide();
+		$("#drawings").hide();
 		}
 
 		
@@ -49,17 +55,21 @@
 		console.log("showVideo");
 		statePhoto=false;
 		stateZines=false;
+		stateDrawings=false
 		$("#video").show();
 		$("#photo").hide();
 		$("#zines").hide();
+		$("#drawings").hide();
 		$(".buttonVideo").css("color", "red");
 		} else {
 		console.log("hideVideo");
 		statePhoto=false;
 		stateZines=false;
+		stateDrawings=false;
 		$("#video").hide();
 		$("#photo").hide();
 		$("#zines").hide();
+		$("3drawings").hide();
 		}
 		
 	});
@@ -76,22 +86,54 @@
 		console.log("showZines");
 		statePhoto=false;
 		stateVideo=false;
+		stateDrawings=false;
 		$("#zines").show();
 		$("#photo").hide();
 		$("#video").hide();
+		$("#drawings").hide();
 		$(".buttonZines").css("color", "red");
 		} else {
 		console.log("hideZines");
 		statePhoto=false;
 		stateVideo=false;
+		stateDrawings=false;
 		$("#video").hide();
 		$("#photo").hide();
 		$("#zines").hide();
+		$("#drawings").hide();
 		}
 		
 	});
 
+// drawings menu click
 
+	$(".buttonDrawings").click( function(){
+		
+		stateDrawings = !stateDrawings;
+		console.log("stateDrawings");
+
+
+	if (stateDrawings==true) {
+		console.log("showDrawings");
+		statePhoto=false;
+		stateVideo=false;
+		stateZines=false;
+		$("#drawings").show();
+		$("#zines").hide();
+		$("#photo").hide();
+		$("#video").hide();
+		$(".buttonDrawings").css("color", "red");
+		} else {
+		console.log("hideDrawings");
+		statePhoto=false;
+		stateVideo=false;
+		stateZines=false;
+		$("#drawings").hide();
+		$("#video").hide();
+		$("#photo").hide();
+		$("#zines").hide();
+		}	
+	});
 
 // photo hover button
 
@@ -138,6 +180,21 @@
 	
 	})
 
+// drawings hover button
+	
+	$(".buttonDrawings").hover(function(){
+
+		hovDrawings = !hovDrawings
+		console.log("hovDrawings");
+
+	if (hovDrawings==true) {
+		$(".buttonDrawings").css("color", "red")
+	} else {
+		$(".buttonDrawings").css("color", "white")
+	}
+	
+	})
+
 
 // mobile menu click
 
@@ -157,39 +214,3 @@
 	
 	});
 
-
-// mobile header dissapear (???????)
-
-// Hide Header on on scroll down
-
-// var didScroll;
-// var ScrollTop = 0;
-// var navbarHeight = $('header').outerHeight();
-
-// $(window).scroll(function(event){
-//     didScroll = true;
-// });
-
-// setInterval(function() {
-//     if (didScroll) {
-//         hasScrolled();
-//         didScroll = false;
-//     }
-// }, 25);
-
-// function hasScrolled() {
-//     var st = $(this).scrollTop();
-
-//     // If they scrolled down and are past the navbar, add class .nav-up.
-//     // This is necessary so you never see what is "behind" the navbar.
-//     if (st > ScrollTop){
-//        $('header').removeClass('nav-down').addClass('nav-up');
-//        $('#frontPic img').css( 'margin-top', '5%');
-
-//     } else {
-//       $('header').removeClass('nav-up').addClass('nav-down');
-//       $('#frontPic img').css( 'margin-top', '23%');
-//     }
- 	
-//     scrollTop = scrollTop
-// }
