@@ -476,7 +476,7 @@ body {
 
 /*smartphone pro landscape*/
 
-@media (min-width: 701px) and (max-width: 740px) and (orientation: landscape) {
+@media (min-width: 701px) and (max-width: 760px) and (orientation: landscape) {
 
 /*menu + banner*/
 
