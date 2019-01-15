@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'futura';
+	font-family: 'futura-book';
 	src: url('../../../fonts/Futura-Book.ttf');
 }
 
 body {
 	background-color: black;
 	color: white;
-	font-family: futura;
+	font-family: futura-book;
 }
 
 
@@ -336,7 +336,7 @@ h1 {
 
 
 		.menu {
-			margin-left:59%;
+			margin-left:54%;
 			margin-top: 18%;
 			display:none;
 			background-color: #000000;
@@ -351,7 +351,7 @@ h1 {
 			}
 
 		.menu-icon img {
-			width: 15%;
+			width: 17%;
 			height: auto;
 			position: static;
 			margin-left: 80%;
@@ -377,7 +377,7 @@ h1 {
 
 /*smartphone normal landscape*/
 
-@media (max-width: 700px) and (orientation: landscape) {
+@media (min-width: 420px) and (max-width: 700px) and (orientation: landscape) {
 
 	/*menu + banner*/
 
@@ -415,7 +415,7 @@ h1 {
 
 
 		.menu {
-			margin-left:75%;
+			margin-left:65%;
 			margin-top: 12%;
 			display:none;
 			background-color: #000000;
@@ -458,7 +458,7 @@ h1 {
 
 /*smartphone pro landscape*/
 
-@media (min-width: 701px) and (max-width: 740px) and (orientation: landscape) {
+@media (min-width: 701px) and (max-width: 760px) and (orientation: landscape) {
 
 /*menu + banner*/
 
@@ -496,7 +496,7 @@ h1 {
 
 
 		.menu {
-			margin-left:75%;
+			margin-left:65%;
 			margin-top: 12%;
 			display:none;
 			background-color: #000000;

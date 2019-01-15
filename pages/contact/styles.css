@@ -1,5 +1,5 @@
   @font-face {
-	font-family: 'futura';
+	font-family: 'futura-book';
 	src: url('../../fonts/Futura-Book.ttf');
 }
 
@@ -381,7 +381,7 @@ body {
 
 
 		.menu {
-			margin-left:59%;
+			margin-left:54%;
 			margin-top: 18%;
 			display:none;
 			background-color: #000000;
@@ -396,7 +396,7 @@ body {
 			}
 
 		.menu-icon img {
-			width: 15%;
+			width: 17%;
 			height: auto;
 			position: static;
 			margin-left: 80%;
@@ -420,7 +420,7 @@ body {
 
 /*smartphone normal landscape*/
 
-@media (max-width: 700px) and (orientation: landscape) {
+@media (min-width: 420px) and (max-width: 700px) and (orientation: landscape) {
 
 	/*menu + banner*/
 
@@ -497,7 +497,7 @@ body {
 
 /*smartphone pro landscape*/
 
-@media (min-width: 701px) and (max-width: 740px) and (orientation: landscape) {
+@media (min-width: 701px) and (max-width: 760px) and (orientation: landscape) {
 
 /*menu + banner*/
 
