@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'futura';
+	font-family: 'futura-book';
 	src: url('../fonts/Futura-Book.ttf');
 }
 
 body {
 	background-color: black;
 	color: white;
-	font-family: futura;
+	font-family: futura-book;
 }
 
 
@@ -422,7 +422,7 @@ body {
 
 
 		.menu {
-			margin-left:75%;
+			margin-left:65%;
 			margin-top: 12%;
 			display:none;
 			background-color: #000000;
@@ -514,7 +514,7 @@ body {
 
 
 		.menu {
-			margin-left:75%;
+			margin-left:65%;
 			margin-top: 12%;
 			display:none;
 			background-color: #000000;
