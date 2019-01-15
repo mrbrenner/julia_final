@@ -330,7 +330,7 @@ body {
 
 
 		.menu {
-			margin-left:56%;
+			margin-left:54%;
 			margin-top: 18%;
 			display:none;
 			background-color: #000000;
@@ -345,7 +345,7 @@ body {
 			}
 
 		.menu-icon img {
-			width: 15%;
+			width: 17%;
 			height: auto;
 			position: static;
 			margin-left: 80%;
